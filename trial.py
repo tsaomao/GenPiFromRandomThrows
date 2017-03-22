@@ -13,10 +13,13 @@
 import math
 import random
 
-def evalRandomPair():
-	random.seed()
-	r1 = random.randrange(randomrange)
-	r2 = random.randrange(randomrange)
+random.seed()
+
+def evalRandomPair(rrange):
+	if rrange == 0:
+		rrange = 1
+	r1 = random.randrange(rrange)
+	r2 = random.randrange(rrange)
 	if math.gcd(r1, r2) > 1:
 		return 1
 	else:
@@ -31,3 +34,5 @@ trialsize = 1000
 # randomrange defines upper value of random range
 randomrange = 500
 
+for i in range(10):
+	print(evalRandomPair(randomrange))
