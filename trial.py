@@ -11,4 +11,23 @@
 #  data to external data dump
 
 import math
+import random
+
+def evalRandomPair():
+	random.seed()
+	r1 = random.randrange(randomrange)
+	r2 = random.randrange(randomrange)
+	if math.gcd(r1, r2) > 1:
+		return 1
+	else:
+		return 0
+
+# Check arguments for override option
+# Check second for parameters file and read parameters from that
+# If no override options or parameters file, prompt for parameters
+# Default parameters:
+# trialsize defines number of random pairs
+trialsize = 1000
+# randomrange defines upper value of random range
+randomrange = 500
 
